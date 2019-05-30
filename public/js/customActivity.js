@@ -9,13 +9,13 @@ define([
     var authTokens = {};
     var payload = {};
     var lastStepEnabled =false;
-    var step =[
+    var steps =[
         { "lebel": "ConfigurePostcard", "Key":"step1"}
     ];
     var currentStep = steps[0].key;
 
-    $(window).ready(onRender);
-
+    ///$(window).ready(onRender);
+    onRender();
     connection.on('initActivity', initialize);
     connection.on('requestedTokens', onGetTokens);
     connection.on('requestedEndpoints', onGetEndpoints);
